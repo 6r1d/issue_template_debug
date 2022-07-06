@@ -1,0 +1,107 @@
+name: "\U0001F41C LTS bug report"
+description: Submit a bug report to help us improve an LTS version of Iroha (iroha2-lts branch)
+title: "[BUG] Change title"
+labels: [ "Bug", "iroha2" ]
+body:
+  - type: input
+    id: commit-hash
+    attributes:
+      label: GIT commit hash
+      description: |
+        What is the commit hash of your Iroha version?
+        Old versions may have more bugs.
+      placeholder: abc123
+    validations:
+      required: true
+  - type: textarea
+    id: mwe
+    attributes:
+      label: Minimum working example code
+      description: |
+        Please share a minimum code that allows to reproduce a problem.
+        Please enable [syntax highlighting](https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting).
+      placeholder: |
+        ```rust
+        fn main() {
+        }
+        ```
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What do you expect the result to be?
+      placeholder: I expect Iroha to run normally.
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: What is the result you get?
+      placeholder: |
+        I get an error message when running Iroha:
+
+        Example error #123 
+    validations:
+      required: true
+  - type: input
+    id: os-type
+    attributes:
+      label: Operating system
+      description: |
+        What is the operating system you used when you encountered the issue?
+      placeholder: Arch Linux
+    validations:
+      required: true
+  - type: input
+    id: libc-type-and-version
+    attributes:
+      label: LibC type and version
+      description: |
+        What is the type of LibC you're using (`GNU libc` or `musl libc`)?
+        What is its version?
+        Use the `ldd --version ldd` command to determine it.
+        Write `N/A` if this command is unavailable on your system.
+      placeholder: some libc v0.1.2
+  - type: dropdown
+    id: env
+    attributes:
+      label: Current environment
+      description: |
+        What is Iroha's current environment?
+        Was it built from the source to run on bare metal?
+        Was it pulled from [Docker Hub](https://hub.docker.com/) or [Nix](https://search.nixos.org/packages) packages?
+      options:
+        - Source code build
+        - Docker Hub
+        - Nix
+    validations:
+      required: true
+  - type: textarea
+    id: json-logs
+    attributes:
+      label: Logs in JSON format
+      description: |
+        Please provide an output log in JSON format.
+        Refer to the [documentation](https://hyperledger.github.io/iroha-2-docs/guide/configure/peer-configuration.html#logger) to configure a file path and level for logs.
+        Note: it is helpful to have JSON [syntax highlighting](https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting) enabled.
+      placeholder: |
+        ```json
+        ```
+    validations:
+      required: true
+  - type: input
+    id: who-can-help
+    attributes:
+      label: Who can help?
+      description: |
+        If you figure out the right person to tag with `@`, it will be possible to solve your issue faster.
+        You can find people using `git blame`; there's also a list of people **you can tag**.
+        
+         - WASM: Marin Veršić, `@mversic`
+         - Triggers: Daniil Polyakov, `@Arjentix`
+         - Theoretical questions: Shunkichi Sato, `@s8sato`
+         - Other topics: Aleksandr Petrosyan, `@appetrosyan`
+      placeholder: "@Username ..."
