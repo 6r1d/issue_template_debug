@@ -1,5 +1,5 @@
 name: "\U0001F41E Stable branch bug report"
-description: Submit a bug report to help us improve the stable version of Iroha on "iroha2" branch
+description: Submit a bug report to help us improve the stable version of Iroha ([`iroha2`](https://github.com/hyperledger/iroha/tree/iroha2) branch)
 title: "[BUG] Change title"
 labels: [ "Bug", "iroha2" ]
 body:
