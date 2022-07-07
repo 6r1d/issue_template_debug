@@ -1,5 +1,5 @@
 name: "\U0001F41C LTS bug report"
-description: Submit a bug report to help us improve an LTS version of Iroha ([`iroha2-lts`](https://github.com/hyperledger/iroha/tree/iroha2-lts) branch)
+description: Submit a bug report to help us improve an LTS version of Iroha ([iroha2-lts](https://github.com/hyperledger/iroha/tree/iroha2-lts) branch)
 title: "[BUG] Change title"
 labels: [ "Bug", "iroha2" ]
 body:
